@@ -1,5 +1,7 @@
 FROM openjdk:11-jdk
 
-COPY .
+RUN wget -O dd-java-agent.jar https://dtdg.co/latest-java-tracer
 
-EXPOSE 8080
+WORKDIR /app
+COPY . /app
+
